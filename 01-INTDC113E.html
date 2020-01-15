@@ -1,119 +1,141 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
-<head><meta charset="utf-8"><!-- utf-8 works for most cases --><meta name="viewport" content="width=device-width"><!-- Forcing initial-scale shouldn't be necessary --><meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Use the latest (edge) version of IE rendering engine --><meta name="x-apple-disable-message-reformatting"><!-- Disable auto-scale in iOS 10 Mail entirely -->
-	<title>DECLARE</title>
-	<!-- The title tag shows in email notifications, like Android 4.4. --><!-- Web Font / @font-face : BEGIN --><!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. --><!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. --><!--[if mso]>
+
+<head>
+    <meta charset="utf-8">
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width">
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">
+    <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title>DECLARE</title>
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
         <style>
             * {
                 font-family: sans-serif !important;
             }
         </style>
-    <![endif]--><!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ --><!--[if !mso]><!--><!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> --><!--<![endif]--><!-- Web Font / @font-face : END --><!-- CSS Reset : BEGIN -->
+    <![endif]-->
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
+    <!-- Web Font / @font-face : END -->
+    <!-- CSS Reset : BEGIN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-	<style type="text/css">/* What it does: Remove spaces around the email design added by some email clients. */
-    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
-
-    html,
-    body {
-        margin: 0 auto !important;
-        padding: 0 !important;
-        height: 100% !important;
-        width: 100% !important;
-    }
-    /* What it does: Stops email clients resizing small text. */
-
-    * {
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
-    }
-    /* What it does: Centers email on Android 4.4 */
-
-    div[style*="margin: 16px 0"] {
-        margin: 0 !important;
-    }
-    /* What it does: Stops Outlook from adding extra spacing to tables. */
-
-    table,
-    td {
-        mso-table-lspace: 0pt !important;
-        mso-table-rspace: 0pt !important;
-    }
-    /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
-
-    table {
-        border-spacing: 0 !important;
-        border-collapse: collapse !important;
-        table-layout: fixed !important;
-        margin: 0 auto !important;
-    }
-
-    table.left-align {
-        margin: 0 0 0 0 !important;
-    }
-
-    table table table {
-        table-layout: auto;
-    }
-    /* What it does: Uses a better rendering method when resizing images in IE. */
-
-    img {
-        -ms-interpolation-mode: bicubic;
-    }
-    /* What it does: A work-around for email clients meddling in triggered links. */
-
-    *[x-apple-data-detectors],
-    /* iOS */
-
-    .x-gmail-data-detectors,
-    /* Gmail */
-
-    .x-gmail-data-detectors *,
-    .aBn {
-        border-bottom: 0 !important;
-        cursor: default !important;
-        color: inherit !important;
-        text-decoration: none !important;
-        font-size: inherit !important;
-        font-family: inherit !important;
-        font-weight: inherit !important;
-        line-height: inherit !important;
-    }
-    /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
-
-    .a6S {
-        display: none !important;
-        opacity: 0.01 !important;
-    }
-    /* If the above doesn't work, add a .g-img class to any image in question. */
-
-    img.g-img+div {
-        display: none !important;
-    }
-    /* What it does: Prevents underlining the button text in Windows 10 */
-
-    .button-link {
-        text-decoration: none !important;
-    }
-    /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
-    /* Create one of these media queries for each additional viewport size you'd like to fix */
-    /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
-
-    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
-        /* iPhone 6 and 6+ */
-        .email-container,
-        .footer-container {
-            min-width: 375px !important;
+    <style type="text/css">
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
         }
-    }
-	</style>
-	<!-- CSS Reset : END --><!-- Progressive Enhancements : BEGIN -->
-	<style type="text/css">/* What it does: Hover styles for buttons */
-
-    .button-td,
-    .button-a {
-        transition: all 100ms ease-in;
-    }
-
+        /* What it does: Stops email clients resizing small text. */
+        
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        /* What it does: Centers email on Android 4.4 */
+        
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        
+        table.left-align {
+            margin: 0 0 0 0 !important;
+        }
+        
+        table table table {
+            table-layout: auto;
+        }
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        
+        *[x-apple-data-detectors],
+        /* iOS */
+        
+        .x-gmail-data-detectors,
+        /* Gmail */
+        
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+        /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+        
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        
+        img.g-img+div {
+            display: none !important;
+        }
+        /* What it does: Prevents underlining the button text in Windows 10 */
+        
+        .button-link {
+            text-decoration: none !important;
+        }
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+        /* Thanks to Eric Lepetit (@ericlepetitsf) for help troubleshooting */
+        
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            /* iPhone 6 and 6+ */
+            .email-container,
+            .footer-container {
+                min-width: 375px !important;
+            }
+        }
+    </style>
+    <!-- CSS Reset : END -->
+    <!-- Progressive Enhancements : BEGIN -->
+    <style type="text/css">
+        /* What it does: Hover styles for buttons */
+        
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        /*
     .button-td:hover,
     .button-a:hover {
         background: #e6a50d !important;
@@ -124,11 +146,13 @@
     .button-a:hover span {
         color: #183260 !important;
     }
-    .button-td-white,
-    .button-a-white {
-        transition: all 100ms ease-in;
-    }
-
+    */
+        
+        .button-td-white,
+        .button-a-white {
+            transition: all 100ms ease-in;
+        }
+        /*
     .button-td-white:hover,
     .button-a-white:hover {
         background: #f9af00 !important;
@@ -140,75 +164,70 @@
         color: #ffffff !important;
     }
     /* Media Queries */
-
-    @media screen and (max-width: 600px) {
-        .email-container,
-        .footer-container {
-            width: 100% !important;
-            margin: auto !important;
-        }
-        .footer-container {
-            table-layout: inherit !important;
-        }
-
-        /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
-        .fluid {
-            max-width: 100% !important;
-            height: auto !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-
-        /* What it does: Forces table cells into full-width rows. */
-        .stack-column,
-        .stack-column-center {
-            display: block !important;
-            width: auto !important;
-            max-width: 100% !important;
-            direction: ltr !important;
-        }
-        .add-mb-mobile {
-            margin-bottom: 20px !important;
-        }
-        .d-none-mobile {
-            display: none !important;
-            opacity: 0 !important;
-            visibility: hidden !important;
-        }
         
-        /* And center justify these ones. */
-        .stack-column-center,
-        .stack-column-center td {
-            text-align: center !important;
+        @media screen and (max-width: 600px) {
+            .email-container,
+            .footer-container {
+                width: 100% !important;
+                margin: auto !important;
+            }
+            .footer-container {
+                table-layout: inherit !important;
+            }
+            /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+            .fluid {
+                max-width: 100% !important;
+                height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            /* What it does: Forces table cells into full-width rows. */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: auto !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            .add-mb-mobile {
+                margin-bottom: 20px !important;
+            }
+            .d-none-mobile {
+                display: none !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+            }
+            /* And center justify these ones. */
+            .stack-column-center,
+            .stack-column-center td {
+                text-align: center !important;
+            }
+            /* Add margin bottom on mobile */
+            .add-mb-mobile {
+                margin-bottom: 20px !important;
+            }
+            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+            table.left-align {
+                margin: 0 auto !important;
+            }
+            .header-bg {
+                background-size: cover !important;
+            }
         }
-        
-        /* Add margin bottom on mobile */
-        .add-mb-mobile {
-            margin-bottom: 20px !important;
-        }
-        /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
-        .center-on-narrow {
-            text-align: center !important;
-            display: block !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-            float: none !important;
-        }
-        table.center-on-narrow {
-            display: inline-block !important;
-        }
-
-        table.left-align {
-            margin: 0 auto !important;
-        }
-
-        .header-bg {
-            background-size: cover !important;
-        }
-    }
-        
-	</style>
-	<!-- Progressive Enhancements : END --><!-- What it does: Makes background images in 72ppi Outlook render at correct size. --><!--[if gte mso 9]>
+    </style>
+    <!-- Progressive Enhancements : END -->
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
     <xml>
         <o:OfficeDocumentSettings>
             <o:AllowPNG/>
@@ -217,274 +236,291 @@
     </xml>
     <![endif]-->
 </head>
+
 <body bgcolor="#ffffff" width="100%" style="margin: 0; mso-line-height-rule: exactly;">
-<center style="background: #e0e0e0; text-align: left; width: 100%;"><!-- Email Header : BEGIN -->
-<table align="center" bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e0e0e0; margin: auto;" width="100%">
-	<tbody>
-		<tr>
-			<td>
-			<table bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e0e0e0; margin: auto;" width="600">
-				<tbody>
-					<tr>
-						<td height="25" style="font-size: 1px; line-height: 25px;">&nbsp;</td>
-					</tr>
-					<tr>
-						<td style="padding: 0 10px;"><img alt="DECLARE" border="0" height="" src="" style="max-width: 120px !important; height: auto;"></td>
-					</tr>
-					<tr>
-						<td height="25" style="font-size: 1px; line-height: 25px;">&nbsp;</td>
-					</tr>
-				</tbody>
-			</table>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<!-- Email Header : END --><!-- Email Body : BEGIN -->
-<table align="center" bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e0e0e0;" width="100%">
-	<tbody>
-		<tr>
-			<td>
-                <table align="center" bgcolor="#9b102f" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #9b102f; margin: auto; text-align: center;" width="600">
-                    <tbody>
-                        <tr>
-                            <td height="40" style="font-size: 1px; line-height: 40px;">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td style=""><img alt="DECLARE" border="0" height="" src="https://elliesantos.github.io/ascalex/img/DC-0101-S1.png" style="max-width: 320px; height: auto;"></td>
-                        </tr>
-                        <tr>
-                            <td height="40" style="font-size: 1px; line-height: 40px;">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>
-                            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
-                                <tbody>
-                                    <tr>
-                                        <td class="button-td" style="background: #ffffff; text-align: center;"><a class="button-a" href="#" pardot-region="editable-link" pardot-region-type="link" style="background: #ffffff; border: 15px solid #ffffff; font-family: 'Helvetica Neue Heavy', sans-serif; font-size: 20px; line-height: 20px; text-align: center; text-decoration: none; display: block; font-weight: 700; text-transform: uppercase; color: #9b102f;" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;LET'S GO&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td height="40" style="font-size: 1px; line-height: 40px;">&nbsp;</td>
-                        </tr>
-                    </tbody>
-                </table>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<table align="center" bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e0e0e0;" width="100%">
-	<tbody>
-		<tr>
-			<td>
-			<table align="center" bgcolor="#142946" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #142946; margin: auto; text-align: center;" width="600">
-				<tbody>
-					<tr>
-						<td class="stack-column-center add-mb-mobile" style="text-align: left;" valign="top">
-						<table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto;">
-							<tbody>
-								<tr>
-									<td height="30" style="font-size: 1px; line-height: 30px;">&nbsp;</td>
-								</tr>
-								<tr>
-                                    <td align="center" style="">
-                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
-                                            <tbody>
-                                                <tr>
-                                                    <td style="font-family: 'Helvetica Neue Heavy', sans-serif; font-size: 18px; line-height: 22px; color: #ffffff; padding: 0 18px; font-weight: 700; text-align: left;">
-                                                    <p pardot-region="" style="margin: 0;">THE WORLD IS READY FOR LEADERS LIKE YOU</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td height="20" style="font-size: 1px; line-height: 20px;">&nbsp;</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-family: 'Helvetica Neue LT Pro', sans-serif; font-size: 14px; line-height: 1.25; color: #ffffff; padding: 0 20px; text-align: left;">
-                                                        <p pardot-region="" style="margin: 0;">With new markets emerging and new technologies rising, the world is ready for you. Grab the opportunities available to you right now and declare yourself an agent of change for women everywhere.</p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-								<tr>
-									<td height="30" style="font-size: 1px; line-height: 30px;">&nbsp;</td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-						<td class="stack-column-center" style="text-align: center; background-image: url(https://elliesantos.github.io/ascalex/img/DC-0101-S2.png); background-size: cover; background-repeat: no-repeat;">
-                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto;">
-                                <tbody>
-                                    <tr>
-                                        <td height="190" style="font-size: 1px; line-height: 190px;">&nbsp;</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<table align="center" bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e0e0e0;" width="100%">
-	<tbody>
-		<tr>
-			<td>
-			<table align="center" bgcolor="#e4484b" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e4484b; margin: auto; text-align: center;" width="600">
-				<tbody>
-					<tr>
-						<td class="stack-column-center" style="text-align: center; background-image: url(https://elliesantos.github.io/ascalex/img/DC-0101-S3.png); background-size: cover; background-repeat: no-repeat;">
-                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto;">
-                                <tbody>
-                                    <tr>
-                                        <td height="190" style="font-size: 1px; line-height: 190px;">&nbsp;</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-						</td>
-						<td class="stack-column-center add-mb-mobile" style="text-align: left;" valign="top">
-						<table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto;">
-							<tbody>
-								<tr>
-									<td height="30" style="font-size: 1px; line-height: 30px;">&nbsp;</td>
-								</tr>
-								<tr>
-                                    <td align="center" style="">
-                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
-                                            <tbody>
-                                                <tr>
-                                                    <td style="font-family: 'Helvetica Neue Heavy', sans-serif; font-size: 18px; line-height: 22px; color: #ffffff; padding: 0 18px; font-weight: 700; text-align: right;">
-                                                    <p pardot-region="" style="margin: 0;">YOUR CAREER ASPIRATIONS ARE OUR GOALS</p>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td height="20" style="font-size: 1px; line-height: 20px;">&nbsp;</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-family: 'Helvetica Neue LT Pro', sans-serif; font-size: 14px; line-height: 1.25; color: #ffffff; padding: 0 20px; text-align: right;">
-                                                        <p pardot-region="" style="margin: 0;">Through Declare's training solutions, you can have a career that matches your potential with leading companies. So join Decalre's growing community of trailblazers and get your 2020 off to a great start.</p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-								<tr>
-									<td height="30" style="font-size: 1px; line-height: 30px;">&nbsp;</td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<table align="center" bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e0e0e0; margin: auto;" width="100%">
-	<tbody>
-		<tr>
-			<td>
-			<table bgcolor="#e8d6b2" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e8d6b2; margin: auto;" width="600">
-				<tbody>
-					<tr>
-						<td height="40" style="font-size: 1px; line-height: 40px;">&nbsp;</td>
-					</tr>
-					<tr>
-						<td>
-						<table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto; text-align: center;" width="580">
-							<tbody>
+    <center style="background: #e0e0e0; text-align: left; width: 100%;">
+        <!-- Email Header : BEGIN -->
+        <table align="center" bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e0e0e0; margin: auto;" width="100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <table bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e0e0e0; margin: auto;" width="600">
+                            <tbody>
                                 <tr>
-                                    <td style=""><img alt="DECLARE" border="0" height="" src="https://elliesantos.github.io/ascalex/img/DC-0101-S4.png" style="max-width: 270px; height: auto;"></td>
+                                    <td height="25" style="font-size: 1px; line-height: 25px;">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                    <td height="20" style="font-size: 1px; line-height: 20px;">&nbsp;</td>
+                                    <td style="padding: 0 10px;"><img alt="DECLARE" border="0" height="" src="" style="max-width: 120px !important; height: auto;"></td>
                                 </tr>
-								<tr>
-									<td style="font-family: 'Helvetica Neue Heavy', sans-serif; font-size: 14px; line-height: 28px; color: #183260; padding: 0 20px; text-align: center;">
-									<p pardot-region="" style="margin: 0;">Join a global community of thousand of women who are defining their futures</p>
-									</td>
-								</tr>
                                 <tr>
-                                    <td height="20" style="font-size: 1px; line-height: 20px;">&nbsp;</td>
+                                    <td height="25" style="font-size: 1px; line-height: 25px;">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Email Header : END -->
+        <!-- Email Body : BEGIN -->
+        <table align="center" bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e0e0e0;" width="100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <table align="center" bgcolor="#9b102f" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #9b102f; margin: auto; text-align: center;" width="600">
+                            <tbody>
+                                <tr>
+                                    <td height="40" style="font-size: 1px; line-height: 40px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td style=""><img alt="DECLARE" border="0" height="" src="https://elliesantos.github.io/ascalex/img/DC-0101-S1.png" style="max-width: 320px; height: auto;"></td>
+                                </tr>
+                                <tr>
+                                    <td height="40" style="font-size: 1px; line-height: 40px;">&nbsp;</td>
                                 </tr>
                                 <tr>
                                     <td>
-                                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
-                                        <tbody>
-                                            <tr>
-                                                <td class="button-td" style="background: #142946; text-align: center;"><a class="button-a" href="#" pardot-region="editable-link" pardot-region-type="link" style="background: #142946; border: 15px solid #142946; font-family: 'Helvetica Neue Heavy', sans-serif; font-size: 20px; line-height: 20px; text-align: center; text-decoration: none; display: block; font-weight: 700; text-transform: uppercase; color: #ffffff;" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;LET'S GO&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="button-td" style="background: #ffffff; text-align: center;"><a class="button-a" href="#" pardot-region="editable-link" pardot-region-type="link" style="background: #ffffff; border: 15px solid #ffffff; font-family: 'Helvetica Neue Heavy', sans-serif; font-size: 20px; line-height: 20px; text-align: center; text-decoration: none; display: block; font-weight: 700; text-transform: uppercase; color: #9b102f;" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;LET'S GO&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </td>
                                 </tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					<tr>
-						<td height="40" style="font-size: 1px; line-height: 40px;">&nbsp;</td>
-					</tr>
-				</tbody>
-			</table>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<table align="center" bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto; background-color: #e0e0e0;" width="100%">
-	<tbody>
-		<tr>
-			<td align="center" valign="top">
-			<table bgcolor="#142946" border="0" cellpadding="0" cellspacing="0" class="footer-container" role="presentation" style="margin: auto; background-color: #142946;" width="600">
-				<tbody>
-					<tr>
-						<td height="10" style="font-size: 1px; line-height: 10px;">&nbsp;</td>
-					</tr>
-                    <tr>
-                        <td align="center"><a href="" target="_blank"><img alt="" border="0" height="" src="" style="width: 143px !important; height: auto;"></a></td>
-                    </tr>
-					<tr>
-						<td height="10" style="font-size: 1px; line-height: 10px;">&nbsp;</td>
-					</tr>
-					<tr>
-						<td align="center" style="font-family: 'Helvetica Neue LT Pro', sans-serif; font-weight: 400; font-size: 12px; line-height: 1; color: #ffffff;">
-						     <p style="margin: 0;"><span style="color: #ff514c;">A:</span> 335 Madison Ave, New York, NY</p>
-						</td>
-					</tr>
-					<tr>
-						<td height="13" style="font-size: 1px; line-height: 13px;">&nbsp;</td>
-					</tr>
-					<tr>
-						<td align="center" class="stack-column-center" style="margin: auto !important;" width="120">
-						<table border="0" cellpadding="0" cellspacing="0" class="left-align" role="presentation">
-							<tbody>
-								<tr>
-									<td style="padding: 0 7px;"><a href="" target="_blank"><img alt="G-Coin" src="http://go.pardot.com/l/643283/2018-12-13/q525g/643283/97255/icon_facebook.png" style="display: block; height: 16px; width: auto;"> </a></td>
-									<td style="padding: 0 7px;"><a href="" target="_blank"><img alt="G-Coin" src="http://go.pardot.com/l/643283/2018-12-13/q525d/643283/97253/icon_twitter.png" style="display: block; height: 16px; width: auto;"> </a></td>
-									<td style="padding: 0 7px;"><a href="" target="_blank"><img alt="G-Coin" src="http://go.pardot.com/l/643283/2019-09-11/srs9n/643283/132107/gcoin_email_footer_ig.png" style="display: block; height: 17px; width: auto;"> </a></td>
-									<td style="padding: 0 7px;"><a href="" target="_blank"><img alt="G-Coin" src="http://go.pardot.com/l/643283/2018-12-13/q52bx/643283/97257/icon_linkedin.png" style="display: block; height: 16px; width: auto;"> </a></td>
-								</tr>
-							</tbody>
-						</table>
-						</td>
-					</tr>
-					<tr>
-						<td height="10" style="font-size: 1px; line-height: 10px;">&nbsp;</td>
-					</tr>
-				</tbody>
-			</table>
-			</td>
-		</tr>
-	</tbody>
-</table>
-<!-- Email Body : END --><!-- Full Bleed Background Section : END --><!-- 2 Even Columns : END --></center>
+                                <tr>
+                                    <td height="40" style="font-size: 1px; line-height: 40px;">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table align="center" bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e0e0e0;" width="100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <table align="center" bgcolor="#142946" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #142946; margin: auto; text-align: center;" width="600">
+                            <tbody>
+                                <tr>
+                                    <td class="stack-column-center add-mb-mobile" style="text-align: left;" valign="top">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto;">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="30" style="font-size: 1px; line-height: 30px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="font-family: 'Helvetica Neue Heavy', sans-serif; font-size: 18px; line-height: 22px; color: #ffffff; padding: 0 18px; font-weight: 700; text-align: left;">
+                                                                        <p pardot-region="" style="margin: 0;">THE WORLD IS READY FOR LEADERS LIKE YOU</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20" style="font-size: 1px; line-height: 20px;">&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="font-family: 'Helvetica Neue LT Pro', sans-serif; font-size: 14px; line-height: 1.25; color: #ffffff; padding: 0 20px; text-align: left;">
+                                                                        <p pardot-region="" style="margin: 0;">With new markets emerging and new technologies rising, the world is ready for you. Grab the opportunities available to you right now and declare yourself an agent of change for women everywhere.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="30" style="font-size: 1px; line-height: 30px;">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="stack-column-center" style="text-align: center; background-image: url(https://elliesantos.github.io/ascalex/img/DC-0101-S2.png); background-size: cover; background-repeat: no-repeat;">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto;">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="190" style="font-size: 1px; line-height: 190px;">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table align="center" bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e0e0e0;" width="100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <table align="center" bgcolor="#e4484b" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e4484b; margin: auto; text-align: center;" width="600">
+                            <tbody>
+                                <tr>
+                                    <td class="stack-column-center" style="text-align: center; background-image: url(https://elliesantos.github.io/ascalex/img/DC-0101-S3.png); background-size: cover; background-repeat: no-repeat;">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto;">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="190" style="font-size: 1px; line-height: 190px;">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td class="stack-column-center add-mb-mobile" style="text-align: left;" valign="top">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto;">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="30" style="font-size: 1px; line-height: 30px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="font-family: 'Helvetica Neue Heavy', sans-serif; font-size: 18px; line-height: 22px; color: #ffffff; padding: 0 18px; font-weight: 700; text-align: right;">
+                                                                        <p pardot-region="" style="margin: 0;">YOUR CAREER ASPIRATIONS ARE OUR GOALS</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="20" style="font-size: 1px; line-height: 20px;">&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="font-family: 'Helvetica Neue LT Pro', sans-serif; font-size: 14px; line-height: 1.25; color: #ffffff; padding: 0 20px; text-align: right;">
+                                                                        <p pardot-region="" style="margin: 0;">Through Declare's training solutions, you can have a career that matches your potential with leading companies. So join Decalre's growing community of trailblazers and get your 2020 off to a great start.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="30" style="font-size: 1px; line-height: 30px;">&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table align="center" bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e0e0e0; margin: auto;" width="100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <table bgcolor="#e8d6b2" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="background-color: #e8d6b2; margin: auto;" width="600">
+                            <tbody>
+                                <tr>
+                                    <td height="40" style="font-size: 1px; line-height: 40px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto; text-align: center;" width="580">
+                                            <tbody>
+                                                <tr>
+                                                    <td style=""><img alt="DECLARE" border="0" height="" src="https://elliesantos.github.io/ascalex/img/DC-0101-S4.png" style="max-width: 270px; height: auto;"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="20" style="font-size: 1px; line-height: 20px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-family: 'Helvetica Neue Heavy', sans-serif; font-size: 14px; line-height: 28px; color: #183260; padding: 0 20px; text-align: center;">
+                                                        <p pardot-region="" style="margin: 0;">Join a global community of thousand of women who are defining their futures</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="20" style="font-size: 1px; line-height: 20px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="button-td" style="background: #142946; text-align: center;"><a class="button-a" href="#" pardot-region="editable-link" pardot-region-type="link" style="background: #142946; border: 15px solid #142946; font-family: 'Helvetica Neue Heavy', sans-serif; font-size: 20px; line-height: 20px; text-align: center; text-decoration: none; display: block; font-weight: 700; text-transform: uppercase; color: #ffffff;" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;LET'S GO&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="40" style="font-size: 1px; line-height: 40px;">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table align="center" bgcolor="#e0e0e0" border="0" cellpadding="0" cellspacing="0" class="email-container" role="presentation" style="margin: auto; background-color: #e0e0e0;" width="100%">
+            <tbody>
+                <tr>
+                    <td align="center" valign="top">
+                        <table bgcolor="#142946" border="0" cellpadding="0" cellspacing="0" class="footer-container" role="presentation" style="margin: auto; background-color: #142946;" width="600">
+                            <tbody>
+                                <tr>
+                                    <td height="10" style="font-size: 1px; line-height: 10px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <a href="" target="_blank"><img alt="" border="0" height="" src="" style="width: 143px !important; height: auto;"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="10" style="font-size: 1px; line-height: 10px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="font-family: 'Helvetica Neue LT Pro', sans-serif; font-weight: 400; font-size: 12px; line-height: 1; color: #ffffff;">
+                                        <p style="margin: 0;"><span style="color: #ff514c;">A:</span> 335 Madison Ave, New York, NY</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="13" style="font-size: 1px; line-height: 13px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="stack-column-center" style="margin: auto !important;" width="120">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="left-align" role="presentation">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding: 0 7px;">
+                                                        <a href="" target="_blank"><img alt="G-Coin" src="http://go.pardot.com/l/643283/2018-12-13/q525g/643283/97255/icon_facebook.png" style="display: block; height: 16px; width: auto;"> </a>
+                                                    </td>
+                                                    <td style="padding: 0 7px;">
+                                                        <a href="" target="_blank"><img alt="G-Coin" src="http://go.pardot.com/l/643283/2018-12-13/q525d/643283/97253/icon_twitter.png" style="display: block; height: 16px; width: auto;"> </a>
+                                                    </td>
+                                                    <td style="padding: 0 7px;">
+                                                        <a href="" target="_blank"><img alt="G-Coin" src="http://go.pardot.com/l/643283/2019-09-11/srs9n/643283/132107/gcoin_email_footer_ig.png" style="display: block; height: 17px; width: auto;"> </a>
+                                                    </td>
+                                                    <td style="padding: 0 7px;">
+                                                        <a href="" target="_blank"><img alt="G-Coin" src="http://go.pardot.com/l/643283/2018-12-13/q52bx/643283/97257/icon_linkedin.png" style="display: block; height: 16px; width: auto;"> </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="10" style="font-size: 1px; line-height: 10px;">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Email Body : END -->
+        <!-- Full Bleed Background Section : END -->
+        <!-- 2 Even Columns : END -->
+    </center>
 </body>
+
 </html>
