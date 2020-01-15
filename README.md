@@ -1,1 +1,3 @@
 # ascalex
+
+permalink: /index.html
